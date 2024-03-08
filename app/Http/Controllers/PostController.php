@@ -21,11 +21,6 @@ public function create()
 
 public function store(StoreUpdatePost $request)
 {
-    $file = $request->image->storeAs('public/posts',$nameFile);
-    $file = str_replace('public/','',$file);
-    $data['image'] = $file;
-
-   // $data = $request->all();
 
     if ($request->image->isValid()){
 

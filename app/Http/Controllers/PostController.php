@@ -21,7 +21,20 @@ public function create()
 
 public function store(StoreUpdatePost $request)
 {
-    Post::create($request->all());
+    $file = $request->image->storeAs('public/posts',$nameFile);
+    $file = str_replace('public/','',$file);
+    $data['image'] = $file;
+
+   // $data = $request->all();
+
+    if ($request->image->isValid()){
+
+        $image = $request->image->store('posts');
+        $data['image'] = $image;
+
+    }
+
+    Post::create($data);
 
     return redirect()->route('posts.index')
     ->with('message','Post criado com sucesso');

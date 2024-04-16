@@ -13,5 +13,5 @@ class Controller extends BaseController
 
 
 // Teste Git Flow release//
-// teste dos Hotfix //
-// teste 3 de Git Flow //
+// Teste dos Hotfix //
+// Teste 3 de Git Flow //

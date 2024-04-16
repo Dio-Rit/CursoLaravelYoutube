@@ -10,8 +10,3 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
 }
-
-
-// Teste Git Flow release//
-// ticket 1 //
-
